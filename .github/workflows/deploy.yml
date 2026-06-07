@@ -1,0 +1,31 @@
+name: Deploy to Verpex via FTP
+
+on:
+  push:
+    branches:
+      - main          # deploy on every push to main
+  workflow_dispatch:  # allow manual deploys from GitHub UI
+
+jobs:
+  deploy:
+    name: FTP Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Verpex via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server:        ${{ secrets.FTP_SERVER }}
+          username:      ${{ secrets.FTP_USERNAME }}
+          password:      ${{ secrets.FTP_PASSWORD }}
+          server-dir:    /public_html/          # change if your Verpex root differs
+          local-dir:     ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .github/**
+            README.md
