@@ -21,7 +21,7 @@ jobs:
           server:        ${{ secrets.FTP_SERVER }}
           username:      ${{ secrets.FTP_USERNAME }}
           password:      ${{ secrets.FTP_PASSWORD }}
-          server-dir:    /public_html/          # change if your Verpex root differs
+          server-dir:    /home/pallavia/pallaviadvocate.com/github        # change if your Verpex root differs
           local-dir:     ./
           exclude: |
             **/.git*
