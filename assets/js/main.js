@@ -92,9 +92,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
        {{from_name}}, {{from_email}}, {{phone}}, {{practice_area}}, {{message}}
   4. Replace the three placeholders below with your real IDs.
 */
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';     // e.g. "user_aBcDeFgHiJkLmNoP"
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';     // e.g. "service_xxxxxxxx"
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';    // e.g. "template_xxxxxxxx"
+const EMAILJS_PUBLIC_KEY  = 'R-RnXFVKjzcf9tCuy';
+const EMAILJS_SERVICE_ID  = 'service_kfu6za9';
+const EMAILJS_TEMPLATE_ID = 'template_rvtb2rn';
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
